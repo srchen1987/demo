@@ -1,0 +1,14 @@
+consul:
+  host: localhost
+  port: 8500
+  separator:
+  token: 
+  wait-time: 10000
+  watch-keys:
+  - /
+ #TLSConfig:
+  #keyStoreInstanceType: JKS, JCEKS, PKCS12, PKCS11, DKS
+  #certificatePath:
+  #certificatePassword:
+  #keyStorePath:
+  #keyStorePassword:

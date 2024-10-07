@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns="https://github.com/srchen1987/dawdler-series"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="https://github.com/srchen1987/dawdler-series https://cdn.jsdelivr.net/gh/srchen1987/dawdler-series-xsd@main/web-conf.xsd">
+	<scanner>
+		<package-paths>
+			<package-path>com.lf.platform.controller</package-path>
+			<package-path>com.lf.platform.interceptor</package-path>
+			<package-path>com.lf.platform.service.impl</package-path>
+		</package-paths>
+	</scanner>
+	<mybatis>
+		<mappers>
+			<mapper>classpath*:com/lf/platform/mapper/xml/*.xml</mapper>
+		</mappers>
+	</mybatis>
+	<datasource-expressions>
+		<datasource-expression id="user-datasource"
+			latent-expression="write=[lf_user_write_datasource],read=[lf_user_read_datasource]" /><!-- 
+			数据源表达式配置 id为标识 latent_expression为读写配置 其中write为写连接 read为读连接 读连接可以配置多个用|分开 
+			轮询方式调用 -->
+
+	</datasource-expressions>
+	<decisions>
+		<!-- mapping 需要注入数据源的service包 latent-expression 为数据源表达式配置中的id -->
+		<decision mapping="com.lf.platform.service.impl"
+			latent-expression-id="user-datasource" />
+	</decisions>
+</config>

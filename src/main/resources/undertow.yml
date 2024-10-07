@@ -1,0 +1,8 @@
+server:
+ port: 8081
+static-location: /statics
+component-package-paths: 
+ - com.lf.platform.listener
+undertow:
+  # worker-threads: 300
+ #virtual-thread: true
