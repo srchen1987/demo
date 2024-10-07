@@ -59,7 +59,7 @@ public class DemoController {
     }
 
 	@ResponseBody
-    @RequestMapping(value="/putRedis", method = RequestMethod.GET)
+    @RequestMapping(value="/getRedis", method = RequestMethod.GET)
     public BaseResult<String> getRedis(String key) {
 		String value = JedisOperator.get(key);
 		System.out.println("get Redis key:"+key+" value:"+value);
