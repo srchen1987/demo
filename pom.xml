@@ -21,13 +21,17 @@
 			<groupId>club.dawdler</groupId>
 			<artifactId>dawdler-client-plug-validator</artifactId>
 		</dependency>
-		<dependency>
+		<!-- <dependency>
 			<groupId>club.dawdler</groupId>
 			<artifactId>dawdler-client-plug-rabbitmq</artifactId>
-		</dependency>
+		</dependency> -->
 		<dependency>
 			<groupId>club.dawdler</groupId>
 			<artifactId>dawdler-client-plug-jedis</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>club.dawdler</groupId>
+			<artifactId>dawdler-client-plug-config-center-consul</artifactId>
 		</dependency>
 	</dependencies>
 	<dependencyManagement>
